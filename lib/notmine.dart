@@ -43,6 +43,7 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
   @override
   void initState() {
     super.initState();
+   // _counter=_pref.getInt('counter');
     _counter = _prefs.then((SharedPreferences prefs) {
       return (prefs.getInt('counter') ?? 0);
     });
